@@ -53,12 +53,9 @@ public class MovieController {
 
 
     //watched movies
-    @GetMapping("/watched-movies")
-    @Query(value = "select * from movies where watched_flag=1",nativeQuery = true)
-    public List<MovieModel>getWatchedMovies(){
-        return movieRepository.findAll();
-    }
-
+//    @GetMapping("/watched-movies")
+//    @Query(value = "select * from movies where watched_flag=1",nativeQuery = true)
+//
 
     //delete movie
 
