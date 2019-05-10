@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/movie-api")
+@RequestMapping(value = "/movie-api",produces = "application/json")
 public class UserController {
     @Autowired
     UserRepository userRepository;
@@ -22,6 +22,7 @@ public class UserController {
     @PostMapping("/register")
     public UserModel registerUser(@Valid @RequestBody UserModel userModel){
         return userRepository.save(userModel);
+
     }
 
 }
